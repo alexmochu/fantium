@@ -1,13 +1,12 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.css';
 
-import NxWelcome from './nx-welcome';
+import Fantium from './fantium';
 
 export function App() {
   return (
     <>
-      <NxWelcome title="client" />
-
+      <Fantium title="client" />
       <div />
     </>
   );
