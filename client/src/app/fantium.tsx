@@ -1,8 +1,8 @@
 export function Fantium({ title }: { title: string }) {
   return (
-      <div>
+      <div className="bg-slate-900">
         <h1>
-          <span> Hello there, </span>
+          <span className="text-white"> Hello there, </span>
               Welcome {title} 👋
           </h1>
       </div>
