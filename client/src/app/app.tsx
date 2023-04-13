@@ -29,10 +29,7 @@ const [data, setData] = useState('data')
   );
 
   return (
-    <>
-      <Fantium title={data} />
-      <div />
-    </>
+    <Fantium title={data} />
   );
 }
 
