@@ -5,11 +5,22 @@ import axios from 'axios';
 
 import Fantium from './fantium';
 
+interface Collection {
+  collection_id: number;
+  number_collection_remaining: number;
+  price: number;
+  status: boolean;
+  perks: string[];
+  percentage_ownership: string;
+}
+
+const baseURL = import.meta.env.VITE_API_BASE_URL
+
 export function App() {
-const [data, setData] = useState('data')
+const [data, setData] = useState<Collection[]>([])
   const getFetchUrl = useCallback(
     () =>
-      `http://localhost:3333/`,
+      `${baseURL}/collections`,
     []
   );
 
@@ -18,7 +29,7 @@ const [data, setData] = useState('data')
       async function fetchData() {
         const result = await axios(getFetchUrl());
         setData(
-          result.data.message
+          result.data
         );
       }
 
@@ -28,8 +39,9 @@ const [data, setData] = useState('data')
     [getFetchUrl]
   );
 
+  const collectionsData: Collection[] = data;
   return (
-    <Fantium title={data} />
+    <Fantium collections={collectionsData} />
   );
 }
 
