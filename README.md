@@ -21,7 +21,7 @@ The API has been built with:
 # UI and API Documentation
 
 - To preview the UI, proceed to https://master.d2jrcp5smfrdab.amplifyapp.com/ .
-- To access the API hosted on the AWS cloud platform -->> https://fantium.onrender.com/
+- To access the API hosted on the Render cloud platform -->> https://fantium.onrender.com/
 
 # Features
 
